@@ -1,0 +1,23 @@
+﻿<Window x:Class="PR7WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR7WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Подключение или создание чата" FontSize="24"></TextBlock>
+        <TextBox Grid.Row="1" Margin="5" ToolTip="Имя" x:Name="NameText"></TextBox>
+        <Button Grid.Row="2" Content="Создать чат" Margin="5" x:Name="CreateChat" Click="CreateChat_Click"></Button>
+        <Button Grid.Row="3" Content="Подключиться к чату" x:Name="JoinChat" Click="JoinChat_Click"></Button>
+        <TextBox Grid.Row="4" Margin="5" ToolTip="IP чата" x:Name="IPText"></TextBox>
+    </Grid>
+</Window>

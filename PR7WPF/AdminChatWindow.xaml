@@ -1,0 +1,46 @@
+﻿<Window x:Class="PR7WPF.AdminChatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR7WPF"
+        mc:Ignorable="d"
+        Title="AdminChatWindow" Height="450" Width="800"
+        x:Name="Window" Closing="Window_Closing">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Пользователи:" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+                <ListBox x:Name="UserList" Grid.Row="1">
+                </ListBox>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Content="Посмотреть логи" Margin="3" FontSize="14" x:Name="Logs" Click="Logs_Click"></Button>
+                <ListBox Grid.Row="1" x:Name="MessageList"></ListBox>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="Выход" Margin="3" FontSize="14" x:Name="Exit" Click="Exit_Click"></Button>
+                    <TextBox Grid.Column="1" x:Name="Message" TextChanged="Message_TextChanged" ></TextBox>
+                    <Button Grid.Column="2" Content="Отправить" Margin="3" FontSize="14" x:Name="Send" Click="Send_Click"></Button>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
